@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   SHELL
 
   # Port forwarding
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 3001, host: 3001
 
   # Login as root when doing vagrant ssh
   if ARGV[0]=='ssh'
