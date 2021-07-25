@@ -25,6 +25,8 @@ This is the setup repository for the [ExpressionDetection](https://github.com/Ex
     * `cd compose`
     * Follow the `README` inside [Compose](https://github.com/ExpressionDetection/compose)
 
+* In order to check if CUDA is working run `nvcc --version`
+
 ## Configuring Visual Code Remote
 
 * Execute `vagrant ssh-config`

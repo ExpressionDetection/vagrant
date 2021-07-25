@@ -22,6 +22,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update -y
 
+    # Install CUDA drivers
+    apt-get install -y nvidia-cuda-toolkit nvidia-cuda-dev libcupti-dev
+
     # Set SSH Key
     echo -e "\n\n\n" | ssh-keygen -t ed25519 -C "vm key"
 
