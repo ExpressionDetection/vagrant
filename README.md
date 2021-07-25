@@ -1,6 +1,6 @@
 # Vagrant setup
 
-This is the setup repository for the [Spoiled](https://gitlab.com/spoiled) project. It contains a `Vagrantfile` with the VM setup for this system.
+This is the setup repository for the [ExpressionDetection](https://github.com/ExpressionDetection) project. It contains a `Vagrantfile` with the VM setup for this system.
 
 ## Getting Started
 
@@ -18,12 +18,12 @@ This is the setup repository for the [Spoiled](https://gitlab.com/spoiled) proje
 * Run `vagrant ssh` to get inside of it afterwards
     * Password is `vagrant`
 
-* Clone [Compose](https://gitlab.com/spoiled/compose) by:
-    * Copy the `~/.ssh/id_ed25519.pub` key content to [GitLab key settings](https://gitlab.com/profile/keys).
+* Clone [Compose](https://github.com/ExpressionDetection/compose) by:
+    * Copy the `~/.ssh/id_ed25519.pub` key content to [Github key settings](https://github.com/settings/keys).
     * `cd /projects`
-    * `git clone git@gitlab.com:spoiled/compose.git`
+    * `git clone git@github.com:ExpressionDetection/compose.git`
     * `cd compose`
-    * Follow the `README` inside [Compose](https://gitlab.com/spoiled/compose)
+    * Follow the `README` inside [Compose](https://github.com/ExpressionDetection/compose)
 
 ## Configuring Visual Code Remote
 
