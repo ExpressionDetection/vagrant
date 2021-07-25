@@ -35,6 +35,7 @@ This is the setup repository for the [ExpressionDetection](https://github.com/Ex
 * Install VS Code `Remote - SSH` extension
 
 * Click on the extension menu and enjoy!
+    * Password is `vagrant`
 
 ## Helpful commands
 
