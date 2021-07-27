@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
+    # vb.gui = true
     vb.memory = 8192
     vb.cpus = 4
   end
@@ -21,9 +21,8 @@ Vagrant.configure("2") do |config|
   # Setup root user and SSH key
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update -y
-
-    # Install CUDA drivers
-    apt-get install -y nvidia-cuda-toolkit nvidia-cuda-dev libcupti-dev
+    apt-get upgrade -y
+    apt-get autoremove -y
 
     # Set SSH Key
     echo -e "\n\n\n" | ssh-keygen -t ed25519 -C "vm key"
@@ -41,6 +40,7 @@ Vagrant.configure("2") do |config|
 
   # Port forwarding
   config.vm.network "forwarded_port", guest: 3001, host: 3001
+  config.vm.network "forwarded_port", guest: 50051, host: 50051
 
   # Login as root when doing vagrant ssh
   if ARGV[0]=='ssh'
