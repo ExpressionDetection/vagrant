@@ -41,6 +41,7 @@ Vagrant.configure("2") do |config|
   # Port forwarding
   config.vm.network "forwarded_port", guest: 3001, host: 3001
   config.vm.network "forwarded_port", guest: 50051, host: 50051
+  config.vm.network "forwarded_port", guest: 6969, host: 6969
 
   # Login as root when doing vagrant ssh
   if ARGV[0]=='ssh'
