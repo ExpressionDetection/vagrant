@@ -4,13 +4,16 @@ This is the setup repository for the [ExpressionDetection](https://github.com/Ex
 
 ## Getting Started
 
-* Install [Virtual Box](https://www.virtualbox.org/wiki/Download_Old_Builds_6_0) version `6.0`
+* Install [Virtual Box](https://www.virtualbox.org/wiki/Download_Old_Builds_6_0) version `6.0` or greater
 
 * Install [Vagrant](https://www.vagrantup.com/)
 
 * For **Windows users only**
     * Disable Hyper-V by running `bcdedit /set hypervisorlaunchtype off` as administrator
     * Reboot your machine
+
+* Run `mkdir ~/ExpressionDetection` to create a folder to host all repositories
+    * This folder will be in sync with the VM
 
 * Run `vagrant up --provision`
     * This will build your development VM
