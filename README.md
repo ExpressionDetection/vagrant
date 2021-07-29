@@ -12,7 +12,7 @@ This is the setup repository for the [ExpressionDetection](https://github.com/Ex
     * Disable Hyper-V by running `bcdedit /set hypervisorlaunchtype off` as administrator
     * Reboot your machine
 
-* Run `mkdir ~/ExpressionDetection` to create a folder to host all repositories
+* Run `mkdir ~/ExpressionDetectionChromeExtension` to create a folder to host all repositories
     * This folder will be in sync with the VM
 
 * Run `vagrant up --provision`

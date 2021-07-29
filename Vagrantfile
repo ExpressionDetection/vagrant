@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     apt-get autoremove -y
 
     # Set SSH Key
-    echo -e "\n\n\n" | ssh-keygen -t ed25519 -C "vm key"
+    echo -e "\n\n\n" | ssh-keygen -t ed25519 -C "VM key"
 
     # Set Root password for local development
     # https://stackoverflow.com/questions/25758737/vagrant-login-as-root-by-default
@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
   SHELL
 
   # Map VM projects folder to a local user folder at host machine
-  config.vm.synced_folder "~/ExpressionDetection", "/projects"
+  config.vm.synced_folder "~/ExpressionDetectionChromeExtension", "/projects/chrome-extension/chrome-extension/"
 
   # Port forwarding
   config.vm.network "forwarded_port", guest: 3000, host: 3000 # chrome-extension frontend
