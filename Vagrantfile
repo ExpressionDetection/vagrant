@@ -42,8 +42,10 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "~/ExpressionDetectionChromeExtension", "/projects/chrome-extension/chrome-extension/"
 
   # Port forwarding
+  config.vm.network "forwarded_port", guest: 3001, host: 3001 # inference-api
   config.vm.network "forwarded_port", guest: 3000, host: 3000 # chrome-extension frontend
   config.vm.network "forwarded_port", guest: 50051, host: 50051 # model1 gRPC api
+  config.vm.network "forwarded_port", guest: 50052, host: 50052 # model2 gRPC api
   config.vm.network "forwarded_port", guest: 6969, host: 6969 # gRPC explorer web app
 
   # Login as root when doing vagrant ssh
